@@ -11,3 +11,4 @@ Order: most recent - least recent
 | [parser(PDL).py](The-Code/parser(PDL).py) | A parser for my python data storing language | https://github.com/itzCozi/Python-Data-Library |
 | [UPM.py](The-Code/UPM.py) | Universal Program Manager is a version control system | https://github.com/itzCozi/UPM |
 | [PD.cpp](The-Code/PD.cpp) | A program that can read, write and make entries in a specified file | https://github.com/itzCozi/Personal-Database |
+| [hitman.py](The-Code/hitman.py) | Bypass DyKnow on ChromeOS, Windows and Your Browser | https://github.com/itzCozi/DyNoir |
