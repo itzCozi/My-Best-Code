@@ -4,6 +4,34 @@ import os, sys
 import random
 import string
 
+# Example Question Set
+# ---------------------------
+# ::
+# ??Which choice accurately summarizes the text.
+# [text/story1.txt]
+# __
+# !The authour writes about their favorite food
+# *Our protagonist finds her husband in a mall
+# !Liz invites a freind over for dinner
+# !The narrator has a nice day in the park
+# ;;
+# 
+# // Anything not in a start or end section is ignored
+# // The amount of answer choices varies depending on the 
+# // amount of line between the __ symbol and ;; symbol
+# 
+# // Each answer choice starts with a upper case letter
+# // (A. <answer-choice>) and Test4Py can only do multiple
+# // choice questions after 26 choices the next choices
+# // start at A by resetting the ticker
+# 
+# ::
+# ??Water is made of 1 hydrogen and 2 oxygen
+# __
+# *True
+# !False
+# ;;
+# ---------------------------
 
 class files:
   base_dir = f'C:/Users/{os.getlogin()}/test4py'
