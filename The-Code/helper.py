@@ -8,6 +8,7 @@ try:
   import time
   import string
   import random
+  import hashlib
   import threading as THC
   from cryptography.fernet import Fernet
 except Exception as e:
@@ -354,44 +355,31 @@ class functions:
 
 class crypto:
 
-  def encrypt(file):
-    # Encrypt the given file and return a key
+  def hashFile(file):
+    # Returns the hash of the given file
     if not os.path.exists(file):
       print(f'ERROR: Could not find {file}.')
       sys.exit(1)
 
-    key = Fernet.generate_key()
-    fernet = Fernet(key)
+    obj = hashlib.sha1()
 
     with open(file, 'rb') as Fin:
-      original = Fin.read()
-      Fin.close()
-    encrypted = fernet.encrypt(original)
+      chunk = 0
+      while chunk != b'':
+        chunk = Fin.read(1024)
+        obj.update(chunk)
+    return obj.hexdigest()
 
-    with open(file, 'wb') as Fout:
-      Fout.write(encrypted)
-      Fout.close()
-    return key
-
-  def decrypt(file, key):
-    # Decrypt an encrypted file with a key
-    if not os.path.exists(file):
-      print(f'ERROR: Could not find {file}.')
+  def hashString(target):
+    if not isinstance(target, str):
+      print('ERROR: Given variable target is not a string.')
       sys.exit(1)
 
-    fernet = Fernet(key)
+    encoded = target.encode()
+    obj = hashlib.sha1(encoded)
+    hex_value = obj.hexdigest()
 
-    with open(file, 'rb') as Fin:
-      encrypted = Fin.read()
-      Fin.close()
-    decrypted = fernet.decrypt(encrypted)
-
-    with open(file, 'wb') as Fout:
-      Fout.write(decrypted)
-      Fout.close()
-
-
-class crypto:
+    return str(hex_value)
 
   def encrypt(file):
     # Encrypt the given file and return a key
