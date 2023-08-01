@@ -1,4 +1,6 @@
 # This is written in kinda my own style with the help of the replit Python formatter
+# TODO: Look over and test then reformat with black to compile and release 1.0
+# TODO: Also edit save files zip with python (write a script idk have fun)
 
 try:
   import os, sys
@@ -10,7 +12,7 @@ except Exception as e:
 
 
 class vars:
-  version = '0.4 Pre-Alpha'  # Side project -> Github repo
+  version = '0.5 Pre-Alpha'  # Side project -> Github repo
   now = lambda: os.popen('time /t').read().replace('\n', '')
   config_file = f'{os.getcwd()}/config'.replace('\\', '/')
   platform = sys.platform
