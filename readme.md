@@ -1,5 +1,5 @@
 ## Index
-Last Updated: 7/9/2023  
+Last Updated: 11/6/2023 (added curses helper)  
 Order: most recent - least recent
 
 | File name | Description | Project/Link | 
@@ -12,3 +12,4 @@ Order: most recent - least recent
 | [UPM.py](The-Code/UPM.py) | Universal Program Manager is a version control system | https://github.com/itzCozi/UPM |
 | [PD.cpp](The-Code/PD.cpp) | A program that can read, write and make entries in a specified file | https://github.com/itzCozi/Personal-Database |
 | [hitman.py](The-Code/hitman.py) | Bypass DyKnow on ChromeOS, Windows and Your Browser | https://github.com/itzCozi/DyNoir |
+| [curses.py](The-Code/curses.py) | Helper for curses including functions and a keyboard input class | https://github.com/itzCozi/Helper |
